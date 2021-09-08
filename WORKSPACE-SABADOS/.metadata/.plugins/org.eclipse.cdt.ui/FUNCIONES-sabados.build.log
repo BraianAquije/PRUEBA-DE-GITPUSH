@@ -1,0 +1,8 @@
+11:15:50 **** Incremental Build of configuration Debug for project FUNCIONES-sabados ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FUNCIONES-sabados.o" "..\\src\\FUNCIONES-sabados.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Input.o" "..\\src\\Input.c" 
+gcc -o FUNCIONES-sabados.exe "src\\FUNCIONES-sabados.o" "src\\Input.o" 
+
+11:15:54 Build Finished. 0 errors, 0 warnings. (took 3s.775ms)
+

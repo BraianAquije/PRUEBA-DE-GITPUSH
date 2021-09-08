@@ -1,0 +1,50 @@
+/*
+ ============================================================================
+ Name        : Ejercicio2-1.c
+ Author      : Aquije Matta Braian (1E)
+ Version     :
+ Copyright   : 
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int IngresarEntero(int numero);
+
+int main(void) {
+	setbuf(stdout,NULL);
+	int ingreseEntero;
+
+	printf("Ingrese un numero: ");
+	scanf("%d",&ingreseEntero);
+
+	printf("El numero ingresado es: %d\n", ingreseEntero);
+	return EXIT_SUCCESS;
+}
+
+int IngresarEntero(int numero)
+{
+	int numeroIngresado;
+
+	printf("%d",numero);
+	scanf("%d", &numeroIngresado);
+
+	numeroIngresado = IngresarEntero(numero);
+
+	if(numeroIngresado == 0){
+		numeroIngresado = "0";
+	}
+	else{
+		if(numeroIngresado < 0)
+			{
+			numeroIngresado ="-1";
+			}
+		else{
+			numeroIngresado ="1";
+		}
+	}
+
+	return numeroIngresado;
+}

@@ -1,0 +1,37 @@
+/*
+ ============================================================================
+ Name        : FUNCIONES-sabados.c
+ Author      : Aquije Matta Braian (1E)
+ Version     :
+ Copyright   : 
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int IngresarEntero(char mensaje[]);
+
+int main(void) {
+	setbuf(stdout,NULL);
+	int legajo;
+	int edad;
+
+	legajo = IngresarEntero("Ingrese legajo: ");
+	edad = IngresarEntero("Ingrese edad:" );
+
+	printf("El legajo ingresado es: %d", legajo);
+	printf("La edad ingresada es: %d", legajo);
+
+	return EXIT_SUCCESS;
+}
+
+int IngresarEntero(char mensaje[])
+{
+	int numeroIngresado;
+	printf("%c",mensaje);
+	scanf("%d", &numeroIngresado);
+
+	return numeroIngresado;
+}

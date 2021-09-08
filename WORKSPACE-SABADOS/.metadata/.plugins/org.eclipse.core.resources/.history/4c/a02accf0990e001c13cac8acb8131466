@@ -1,0 +1,52 @@
+/*
+ ============================================================================
+ Name        : Ejercicio2-1.c
+ Author      : Aquije Matta Braian (1E)
+ Version     :
+ Copyright   : 
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Validar(int numero);
+
+int main(void) {
+	setbuf(stdout, NULL);
+	int ingreseEntero;
+
+	printf("Ingrese un numero: ");
+	scanf("%d", &ingreseEntero);
+
+	ingreseEntero = Validar(ingreseEntero);
+
+	if (ingreseEntero == 0) {
+		printf("El numero ingresado fue: %d\n", ingreseEntero);
+	} else {
+		if (ingreseEntero > 0) {
+			printf("El resultado es positivo, por ende: %d\n", ingreseEntero);
+		} else {
+			printf("El resultado es negativo por ende: %d\n", ingreseEntero);
+		}
+	}
+
+	return EXIT_SUCCESS;
+}
+
+int Validar(int numero) {
+	int numeroIngresado;
+
+	if (numero == 0) {
+		numeroIngresado = 0;
+	} else {
+		if (numero > 0) {
+			numeroIngresado = 1;
+		} else {
+			numeroIngresado = -1;
+		}
+	}
+
+	return numeroIngresado;
+}
